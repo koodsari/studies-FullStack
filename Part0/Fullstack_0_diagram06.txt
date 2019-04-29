@@ -1,0 +1,15 @@
+
+
+note over selain:
+SPA: Käyttäjä painaa Lisää-painiketta ja uusi huomautus lisätään
+end note
+selain->palvelin: HTTP POST https://fullstack-example.now.sh/new_note_spa
+note over palvelin:
+Onnistuneen lisäyksen jälkeen palautetaan status 201 ja tieto onnistuneesta lisäyksestä
+end note
+palvelin-->selain: Response code: 201
+
+note over selain:
+selain suorittaa tapahtumankäsittelijän
+joka renderöi uuden muistiinpanon html:n listan viimeisimmäksi
+end note
